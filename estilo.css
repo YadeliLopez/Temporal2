@@ -1,4 +1,4 @@
-#calculadora{
+.calculadora{
     display:block; 
     margin:0 auto; 
     padding: 20px;
@@ -9,7 +9,7 @@
 
 }
 
-#calculadora td button{
+.calculadora td button{
     display: block;
     width: 70px;
     height: 70px;
