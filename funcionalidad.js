@@ -60,6 +60,55 @@ function init(){
     }
     suma.onclick = function(e){
         operandoA = resultado.textContent;
+        operacion = "+";
+        limpiar();
     }
 
+    resta.onclick = function(e){
+        operandoA = resultado.textContent;
+        operacion = "-";
+        limpiar();
+    }
+
+    multiplicacion.onclick = function(e){
+        operandoA = resultado.textContent;
+        operacion = "x";
+        limpiar();
+    }
+
+    igual.onclick = function(e){
+        operandoB = resultado.textContent;
+        resolver();
+    }
+}
+
+function limpiar(){
+    resultado.textContent = "";
+}
+
+function resetear(){
+    resultado.textContent = "";
+    operandoA = 0;
+    operandoB = 0;
+    operacion = "";
+}
+
+function resolver(){
+    var res = 0;
+    switch(operation){
+        case "+":
+            res = parseFloat(operandoA) + parseFloat(operandoB);
+            break;
+        case "-":
+            res = parseFloat(operandoA) - parseFloat(operandoB);
+            break;
+        case "x":
+            res = parseFloat(operandoA) * parseFloat(operandoB);
+            break;
+        case "/":
+            res = parseFloat(operandoA) / parseFloat(operandoB);
+            break;
+    }
+    resetear();
+    resultado.textContent = res;
 }
