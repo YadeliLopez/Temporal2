@@ -76,6 +76,12 @@ function init(){
         limpiar();
     }
 
+    division.onclick = function(e){
+        operandoA = resultado.textContent;
+        operacion = "/";
+        limpiar();
+    }
+
     igual.onclick = function(e){
         operandoB = resultado.textContent;
         resolver();
