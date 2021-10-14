@@ -1,3 +1,4 @@
+//declaración de variables
 var operandoA;
 var operandoB;
 var operacion;
@@ -21,7 +22,7 @@ function init(){
     var ocho = document.getElementById("ocho");
     var nueve = document.getElementById("nueve");
     var cero = document.getElementById("cero");
-
+}
     //eventos
     uno.onclick = function(e){
         resultado.textContent = resultado.textContent + "1";
@@ -86,7 +87,6 @@ function init(){
         operandoB = resultado.textContent;
         resolver();
     }
-}
 
 function limpiar(){
     resultado.textContent = "";
@@ -101,7 +101,7 @@ function resetear(){
 
 function resolver(){
     var res = 0;
-    switch(operation){
+    switch(operacion){
         case "+":
             res = parseFloat(operandoA) + parseFloat(operandoB);
             break;
